@@ -20,5 +20,10 @@ abstract: >-
   LeJEPA isotropy-dial pretraining harness with a collapse-avoidance fix.
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.20712124"
+    description: "Zenodo version DOI (v0.1.0, with preprint PDF)"
+  - type: doi
     value: "10.5281/zenodo.20711953"
-    description: "Zenodo DOI"
+    description: "Zenodo concept DOI (always resolves to latest version)"
+repository-code: "https://github.com/K144U/jepa-adapter-merging"
+url: "https://doi.org/10.5281/zenodo.20712124"
