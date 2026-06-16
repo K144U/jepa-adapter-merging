@@ -19,7 +19,7 @@
 Weight-space merging of independently trained LoRA adapters is now standard
 practice for CLIP- and LLM-family encoders, but has never been studied on
 Joint-Embedding Predictive Architectures (JEPAs), despite their growing role
-as general visual backbones. We present the first systematic study of PEFT
+as general visual backbones. We present the first study of PEFT
 adapter merging on JEPA-family encoders (V-JEPA~2, plus MAE, DINOv2, and
 LeJEPA backbones for contrast), evaluating five mergers under two protocols.
 Our central empirical finding is a \emph{localization of interference}: under
@@ -29,7 +29,10 @@ averaging and TIES-style mergers lose $15$--$24$ points (mean retention
 $0.835$). The P1--P2 gap is statistically robust (paired Wilcoxon
 $p=6.8\times10^{-7}$, $5$ backbones, $50$ merges) and shows that at $k{=}2$,
 merging on JEPA backbones does not destroy linearly-decodable features---it
-breaks head-compatibility. Second, a rate--distortion-optimal merging encoder
+breaks head-compatibility. Whereas re-fitting a probe on supervised-ViT
+merges only \emph{partially} restores accuracy~\citep{sharma2024nonlocal},
+here recovery is essentially complete, localizing interference almost
+entirely to the head. Second, a rate--distortion-optimal merging encoder
 (RD-encoder) is the strongest head-preserving merger: it has the smallest
 P1--P2 gap of any method ($0.04$ vs $0.19$--$0.43$), is best on P2 for four
 of five backbones, and beats task arithmetic on P2 overall by $+0.19$ (95\%
@@ -54,15 +57,22 @@ protocol, and that a rate--distortion-optimal encoder is markedly more robust
 than the standard averaging and trimming mergers.
 
 \paragraph{Contributions.}
-(1) The first systematic study of PEFT adapter merging on JEPA-family
-encoders. (2) An interference-localization result: at $k{=}2$, merging
-preserves re-fit-probe accuracy (P1) but degrades original-head accuracy
-(P2); the P1--P2 gap localizes interference to head-compatibility rather than
-feature destruction. (3) A rate--distortion-optimal merging encoder that is
-the strongest head-preserving merger across SSL families and two scales (best
-on P2 for four of five backbones; it ties on the well-merging DINOv2). (4) An
-open release: metric library, adapters, and a SIGReg-based isotropy-dial
-pretraining harness with a documented collapse-avoidance fix.
+(1) The first study of PEFT adapter merging on JEPA-family encoders.
+(2) A \emph{sharpened} interference-localization result. Prior work on
+supervised-ViT merging used the same probe-refit instrument and found that
+re-fitting only \emph{partially} recovers merged-model
+accuracy~\citep{sharma2024nonlocal}; we show that on JEPA-family SSL backbones
+at $k{=}2$ the re-fit probe recovers to ceiling (P1 mean $1.04$) while
+original-head accuracy (P2) drops $15$--$24$ points---interference is
+localized \emph{almost entirely} to head-compatibility, not partially. The
+conceptual frame (probe re-fitting to localize interference) is not ours; the
+completeness of the recovery on these backbones is the empirical
+contribution. (3) Our principal methodological contribution: a
+rate--distortion-optimal merging encoder (RD-encoder) that is the strongest
+head-preserving merger across SSL families and two scales (smallest P1--P2
+gap; best on P2 for four of five backbones; it ties on the well-merging
+DINOv2). (4) An open release: metric library, adapters, and a SIGReg-based
+isotropy-dial pretraining harness with a documented collapse-avoidance fix.
 
 \section{Related work}
 \paragraph{Model merging and task vectors.} Averaging fine-tuned weights
@@ -79,13 +89,31 @@ merging~\cite{pathak2026rdmerge}. These spectrum/merge-time methods are
 orthogonal to our question---we ask where interference \emph{appears}
 (features vs heads) on a family of backbones, and which existing merger is
 most robust there. All adaptation is via LoRA~\cite{hu2022lora}.
+\paragraph{Closest prior work.} Two lines are directly adjacent.
+\citet{kesim2024multilora} merge up to three LoRA adapters trained on six
+supervised vision tasks and compare against a frozen-backbone,
+fine-tuned-head baseline, reporting---as we do---that merging is achievable
+with some loss of performance; their setting is supervised ViT rather than
+JEPA-family SSL, and they do not separate feature- from head-level
+interference. \citet{sharma2024nonlocal} ask precisely \emph{where} merging
+interference originates: they re-fit a linear probe on the merged model to
+test whether the penultimate-layer features remain compatible with the fixed
+expert classifier, and propose rescaling and shifting the output activations
+to compensate. This is the same probe-refit instrument we use, and the
+head-localization frame is theirs, not ours; on supervised ViT they find that
+probing only \emph{partially} restores merged accuracy. Our contribution
+relative to them is empirical and sharper: on JEPA-family SSL backbones at
+$k{=}2$ the re-fit probe recovers \emph{fully} (P1 mean $1.04$), localizing
+interference almost entirely to the head, and we contribute a head-preserving
+merger (RD-encoder) that closes the P1--P2 gap without any re-fitting.
 \paragraph{JEPA-family and self-supervised backbones.} Joint-embedding
 predictive architectures predict masked targets in latent
 space~\cite{assran2023ijepa,assran2025vjepa2}; LeJEPA~\cite{balestriero2025lejepa}
 gives a predictor-free objective (SIGReg) with a theoretical optimum at
 isotropic-Gaussian embeddings. We contrast against masked
 reconstruction~\cite{he2022mae} and self-distillation~\cite{oquab2024dinov2}.
-To our knowledge no prior work studies adapter merging on any of these.
+To our knowledge no prior work studies adapter merging on JEPA-family
+encoders specifically.
 \paragraph{Representation geometry.} Anisotropy and dimensional collapse are
 well documented~\cite{gao2019degeneration}; we measure isotropy with effective
 rank~\cite{roy2007erank} and IsoScore~\cite{rudman2022isoscore}, and
@@ -136,7 +164,11 @@ is significant (Wilcoxon $p=6.8\times10^{-7}$, $n{=}50$). Interpretation: at
 $k{=}2$ on these backbones, the merged encoder still linearly encodes both
 tasks---a re-fit probe recovers them---so the interference that practitioners
 observe with frozen heads is a \emph{head-compatibility} failure, not
-destruction of the underlying features. The practical reading is that on JEPA
+destruction of the underlying features. Where \citet{sharma2024nonlocal}
+report that probe re-fitting only partially restores merged supervised-ViT
+accuracy, here recovery is essentially complete (P1 mean $1.04$), indicating
+that on these SSL backbones at low $k$ the features are left almost intact.
+The practical reading is that on JEPA
 and related SSL backbones, a cheap per-task probe re-fit after merging
 recovers most of the apparent interference; the harder problem, which the
 next section addresses, is preserving the original heads.
