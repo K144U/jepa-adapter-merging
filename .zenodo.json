@@ -4,8 +4,8 @@
   "publication_type": "preprint",
   "description": "First systematic study of PEFT (LoRA) adapter merging on JEPA-family vision encoders (V-JEPA 2, MAE, DINOv2, and in-house LeJEPA ViT-S backbones). Central finding: at k=2, weight-space merging preserves linearly-decodable features (a re-fit probe, P1, stays at ceiling) but breaks original-head compatibility (P2 drops 15-24 points; paired Wilcoxon p=6.8e-7 across 5 backbones / 50 merges). A rate-distortion-optimal merging encoder is the strongest head-preserving merger (smallest P1-P2 gap; best P2 on 4/5 backbones; +0.19 over task arithmetic, 95% CI [0.09, 0.28]). Includes an importable isotropy/geometry metric library, all adapters and merged checkpoints, five merger implementations, and a LeJEPA SIGReg isotropy-dial pretraining harness with a documented collapse-avoidance fix. The causal isotropy-composability question is reported as a motivated open problem with a documented negative pilot.",
   "creators": [
-    {"name": "Pathak, Sankalp", "affiliation": "Jaypee Institute of Information Technology"},
-    {"name": "Garg, Sanjay", "affiliation": "Jaypee Institute of Information Technology"}
+    {"name": "Pathak, Sankalp", "affiliation": "Jaypee University of Engineering and Technology Guna"},
+    {"name": "Garg, Sanjay", "affiliation": "Jaypee University of Engineering and Technology Guna"}
   ],
   "keywords": [
     "model merging", "LoRA", "task vectors", "JEPA", "self-supervised learning",
