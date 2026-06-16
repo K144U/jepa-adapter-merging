@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint below."
+title: "Adapter Merging on JEPA Backbones: Interference Lives in the Head, and a Rate-Distortion-Optimal Encoder Recovers It"
+authors:
+  - family-names: Pathak
+    given-names: Sankalp
+    affiliation: "Jaypee Institute of Information Technology"
+  - family-names: Garg
+    given-names: Sanjay
+    affiliation: "Jaypee Institute of Information Technology"
+version: 0.1.0
+date-released: 2026-06-16
+license: CC-BY-4.0
+type: software
+abstract: >-
+  First systematic study of LoRA adapter merging on JEPA-family vision
+  encoders. Merging at k=2 preserves features (re-fit probe at ceiling) but
+  breaks head-compatibility; a rate-distortion-optimal encoder is the most
+  head-preserving merger. Includes metric library, adapters, mergers, and a
+  LeJEPA isotropy-dial pretraining harness with a collapse-avoidance fix.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.TODO"
+    description: "Zenodo DOI assigned on deposit"

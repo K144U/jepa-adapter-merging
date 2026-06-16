@@ -1,0 +1,29 @@
+=== T1: retention by merger x protocol (C0, pooled over backbones+pairs) ===
+merger              P1 (re-fit)  P2 (head reuse)  P1-P2 gap
+uniform                   1.039            0.773      0.265
+task_arithmetic           1.146            0.716      0.430
+ties                      1.031            0.826      0.205
+dare_ties                 1.012            0.821      0.191
+rd_encoder                0.945            0.907      0.038
+
+=== T2: P2 retention by backbone x merger (C0) ===
+backbone                   uniform  task_ari      ties  dare_tie  rd_encod
+V-JEPA 2 ViT-L               0.848     0.660     0.889     0.860     0.990
+MAE ViT-L                    0.651     0.488     0.707     0.656     0.761
+DINOv2 ViT-L                 0.904     0.799     0.931     0.898     0.902
+LeJEPA ViT-S (low-reg)       0.719     0.801     0.824     0.779     0.922
+LeJEPA ViT-S (high-reg)      0.745     0.835     0.779     0.909     0.960
+
+=== T3: rd_encoder P2 margin over best averaging/TIES baseline ===
+backbone                 rd_encoder  best base   margin
+V-JEPA 2 ViT-L                0.990      0.889   +0.101  (vs ties)
+MAE ViT-L                     0.761      0.707   +0.054  (vs ties)
+DINOv2 ViT-L                  0.902      0.931   -0.029  (vs ties)
+LeJEPA ViT-S (low-reg)        0.922      0.824   +0.098  (vs ties)
+LeJEPA ViT-S (high-reg)       0.960      0.909   +0.050  (vs dare_ties)
+
+=== headline stats ===
+P1 vs P2 paired Wilcoxon (all merges): p=6.78e-07  (mean P1 1.035 vs P2 0.809)
+rd_encoder - task_arithmetic on P2: +0.191 [95% CI +0.090, +0.279], n=10
+
+backbones with data: 5/5  | total C0 merges: 50

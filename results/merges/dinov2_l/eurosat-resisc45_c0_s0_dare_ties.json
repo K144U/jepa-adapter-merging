@@ -1,0 +1,145 @@
+{
+ "encoder": "dinov2_l",
+ "merger": "dare_ties",
+ "merger_args": {
+  "drop_p": 0.9,
+  "density": 0.2,
+  "coef": 1.0
+ },
+ "tasks": [
+  "eurosat",
+  "resisc45"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/dinov2_l/eurosat_c0_s0.pt",
+  "results/adapters/dinov2_l/resisc45_c0_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "eurosat": 0.9812962962962963,
+  "resisc45": 0.9412698412698413
+ },
+ "acc_p2_merged": {
+  "eurosat": 0.8829629421234131,
+  "resisc45": 0.7209523916244507
+ },
+ "solo_p1": {
+  "eurosat": 0.9807407407407407,
+  "resisc45": 0.9544444444444444
+ },
+ "solo_p2": {
+  "eurosat": 0.9831481481481481,
+  "resisc45": 0.9492063492063492
+ },
+ "retention_p1": {
+  "retention_mean": 0.9933815196731353,
+  "retention_worst": 0.9861965740894728,
+  "per_task": {
+   "eurosat": 1.0005664652567976,
+   "resisc45": 0.9861965740894728
+  },
+  "acc_merged_mean": 0.9612830687830688
+ },
+ "retention_p2": {
+  "retention_mean": 0.8288146663927598,
+  "retention_worst": 0.7595317838184013,
+  "per_task": {
+   "eurosat": 0.8980975489671182,
+   "resisc45": 0.7595317838184013
+  },
+  "acc_merged_mean": 0.8019576668739319
+ },
+ "feature_drift": {
+  "eurosat": 0.9486380815505981,
+  "resisc45": 0.8687421679496765
+ },
+ "cka": {
+  "eurosat": 0.936310795324661,
+  "resisc45": 0.8523952580459969
+ },
+ "taskvec_geometry": {
+  "names": [
+   "eurosat",
+   "resisc45"
+  ],
+  "pairwise_cosine_mean": 0.053331002593040466,
+  "pairwise_cosine": [
+   [
+    1.0160458087921143,
+    0.053331002593040466
+   ],
+   [
+    0.053331002593040466,
+    1.0229394435882568
+   ]
+  ],
+  "sign_conflict_rate": 0.4899056851863861,
+  "sign_conflict_per_layer": {
+   "net.blocks.0.attn.proj": 0.523961067199707,
+   "net.blocks.0.attn.qkv": 0.46304893493652344,
+   "net.blocks.1.attn.proj": 0.4913501739501953,
+   "net.blocks.1.attn.qkv": 0.5032402873039246,
+   "net.blocks.10.attn.proj": 0.5012331008911133,
+   "net.blocks.10.attn.qkv": 0.49944400787353516,
+   "net.blocks.11.attn.proj": 0.49416351318359375,
+   "net.blocks.11.attn.qkv": 0.49207592010498047,
+   "net.blocks.12.attn.proj": 0.47328758239746094,
+   "net.blocks.12.attn.qkv": 0.4939657747745514,
+   "net.blocks.13.attn.proj": 0.48064613342285156,
+   "net.blocks.13.attn.qkv": 0.49312272667884827,
+   "net.blocks.14.attn.proj": 0.47829246520996094,
+   "net.blocks.14.attn.qkv": 0.4813346862792969,
+   "net.blocks.15.attn.proj": 0.4573078155517578,
+   "net.blocks.15.attn.qkv": 0.4772186279296875,
+   "net.blocks.16.attn.proj": 0.4599332809448242,
+   "net.blocks.16.attn.qkv": 0.4844605028629303,
+   "net.blocks.17.attn.proj": 0.4749031066894531,
+   "net.blocks.17.attn.qkv": 0.47156110405921936,
+   "net.blocks.18.attn.proj": 0.46634864807128906,
+   "net.blocks.18.attn.qkv": 0.46420955657958984,
+   "net.blocks.19.attn.proj": 0.49801158905029297,
+   "net.blocks.19.attn.qkv": 0.47566699981689453,
+   "net.blocks.2.attn.proj": 0.5090131759643555,
+   "net.blocks.2.attn.qkv": 0.5034134984016418,
+   "net.blocks.20.attn.proj": 0.4915637969970703,
+   "net.blocks.20.attn.qkv": 0.4836082458496094,
+   "net.blocks.21.attn.proj": 0.4880037307739258,
+   "net.blocks.21.attn.qkv": 0.49580541253089905,
+   "net.blocks.22.attn.proj": 0.4840278625488281,
+   "net.blocks.22.attn.qkv": 0.49194779992103577,
+   "net.blocks.23.attn.proj": 0.504216194152832,
+   "net.blocks.23.attn.qkv": 0.4881683886051178,
+   "net.blocks.3.attn.proj": 0.49831676483154297,
+   "net.blocks.3.attn.qkv": 0.49685701727867126,
+   "net.blocks.4.attn.proj": 0.48626136779785156,
+   "net.blocks.4.attn.qkv": 0.49149927496910095,
+   "net.blocks.5.attn.proj": 0.5015048980712891,
+   "net.blocks.5.attn.qkv": 0.5004237294197083,
+   "net.blocks.6.attn.proj": 0.4971284866333008,
+   "net.blocks.6.attn.qkv": 0.5066763758659363,
+   "net.blocks.7.attn.proj": 0.5002403259277344,
+   "net.blocks.7.attn.qkv": 0.49696221947669983,
+   "net.blocks.8.attn.proj": 0.4967031478881836,
+   "net.blocks.8.attn.qkv": 0.5045769810676575,
+   "net.blocks.9.attn.proj": 0.49383544921875,
+   "net.blocks.9.attn.qkv": 0.5009428858757019
+  },
+  "subspace_overlap_mean": 0.6208532638847828,
+  "stable_rank": {
+   "eurosat": 2.3448019473661876,
+   "resisc45": 3.265643684328815
+  },
+  "participation_ratio": {
+   "eurosat": 4.099226534366608,
+   "resisc45": 6.013131079574426
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.0,
+  0.0
+ ]
+}

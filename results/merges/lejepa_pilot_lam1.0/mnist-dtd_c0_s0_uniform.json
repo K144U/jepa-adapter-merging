@@ -1,0 +1,117 @@
+{
+ "encoder": "lejepa_s",
+ "merger": "uniform",
+ "merger_args": {},
+ "tasks": [
+  "mnist",
+  "dtd"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/lejepa_pilot_lam1.0/mnist_c0_s0.pt",
+  "results/adapters/lejepa_pilot_lam1.0/dtd_c0_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "mnist": 0.4435,
+  "dtd": 0.08138297872340426
+ },
+ "acc_p2_merged": {
+  "mnist": 0.11389999836683273,
+  "dtd": 0.021276595070958138
+ },
+ "solo_p1": {
+  "mnist": 0.215,
+  "dtd": 0.15
+ },
+ "solo_p2": {
+  "mnist": 0.1139,
+  "dtd": 0.02127659574468085
+ },
+ "retention_p1": {
+  "retention_mean": 1.3026719445818902,
+  "retention_worst": 0.5425531914893618,
+  "per_task": {
+   "mnist": 2.062790697674419,
+   "dtd": 0.5425531914893618
+  },
+  "acc_merged_mean": 0.26244148936170214
+ },
+ "retention_p2": {
+  "retention_mean": 0.9999999769982131,
+  "retention_worst": 0.9999999683350325,
+  "per_task": {
+   "mnist": 0.9999999856613936,
+   "dtd": 0.9999999683350325
+  },
+  "acc_merged_mean": 0.06758829671889544
+ },
+ "feature_drift": {
+  "mnist": 0.22413642704486847,
+  "dtd": 0.09238766133785248
+ },
+ "cka": {
+  "mnist": 0.06766887113411355,
+  "dtd": 0.8848926798407252
+ },
+ "taskvec_geometry": {
+  "names": [
+   "mnist",
+   "dtd"
+  ],
+  "pairwise_cosine_mean": 0.013338187709450722,
+  "pairwise_cosine": [
+   [
+    1.0010504722595215,
+    0.013338187709450722
+   ],
+   [
+    0.013338187709450722,
+    1.000780701637268
+   ]
+  ],
+  "sign_conflict_rate": 0.5006155967712402,
+  "sign_conflict_per_layer": {
+   "net.blocks.0.attn.proj": 0.4782918393611908,
+   "net.blocks.0.attn.qkv": 0.4990302324295044,
+   "net.blocks.1.attn.proj": 0.5056830644607544,
+   "net.blocks.1.attn.qkv": 0.49895787239074707,
+   "net.blocks.10.attn.proj": 0.4744330644607544,
+   "net.blocks.10.attn.qkv": 0.5416734218597412,
+   "net.blocks.11.attn.proj": 0.4787326455116272,
+   "net.blocks.11.attn.qkv": 0.49871373176574707,
+   "net.blocks.2.attn.proj": 0.4944729208946228,
+   "net.blocks.2.attn.qkv": 0.49703413248062134,
+   "net.blocks.3.attn.proj": 0.4992336630821228,
+   "net.blocks.3.attn.qkv": 0.49584734439849854,
+   "net.blocks.4.attn.proj": 0.5105387568473816,
+   "net.blocks.4.attn.qkv": 0.4998779296875,
+   "net.blocks.5.attn.proj": 0.5027737021446228,
+   "net.blocks.5.attn.qkv": 0.49183031916618347,
+   "net.blocks.6.attn.proj": 0.5081040859222412,
+   "net.blocks.6.attn.qkv": 0.4957004189491272,
+   "net.blocks.7.attn.proj": 0.4937337338924408,
+   "net.blocks.7.attn.qkv": 0.5235663652420044,
+   "net.blocks.8.attn.proj": 0.4826592206954956,
+   "net.blocks.8.attn.qkv": 0.49470123648643494,
+   "net.blocks.9.attn.proj": 0.4941270649433136,
+   "net.blocks.9.attn.qkv": 0.49865496158599854
+  },
+  "subspace_overlap_mean": 0.563865980754296,
+  "stable_rank": {
+   "mnist": 1.0103455372799235,
+   "dtd": 1.4213235089763119
+  },
+  "participation_ratio": {
+   "mnist": 1.0207720547914505,
+   "dtd": 1.7790801177422206
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.0,
+  0.0
+ ]
+}

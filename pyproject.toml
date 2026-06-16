@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isomerge"
+version = "0.1.0"
+description = "Isotropy and LoRA composability on JEPA backbones: metric library and experiment pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.4",
+    "torchvision",
+    "timm>=1.0",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "pyyaml",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

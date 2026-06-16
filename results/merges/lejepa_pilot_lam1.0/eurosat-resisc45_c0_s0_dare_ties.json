@@ -1,0 +1,121 @@
+{
+ "encoder": "lejepa_s",
+ "merger": "dare_ties",
+ "merger_args": {
+  "drop_p": 0.9,
+  "density": 0.2,
+  "coef": 1.0
+ },
+ "tasks": [
+  "eurosat",
+  "resisc45"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/lejepa_pilot_lam1.0/eurosat_c0_s0.pt",
+  "results/adapters/lejepa_pilot_lam1.0/resisc45_c0_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "eurosat": 0.5481481481481482,
+  "resisc45": 0.22158730158730158
+ },
+ "acc_p2_merged": {
+  "eurosat": 0.1379629671573639,
+  "resisc45": 0.028730159625411034
+ },
+ "solo_p1": {
+  "eurosat": 0.5662962962962963,
+  "resisc45": 0.13634920634920636
+ },
+ "solo_p2": {
+  "eurosat": 0.2337037037037037,
+  "resisc45": 0.040952380952380955
+ },
+ "retention_p1": {
+  "retention_mean": 1.2965492142215955,
+  "retention_worst": 0.9679529103989536,
+  "per_task": {
+   "eurosat": 0.9679529103989536,
+   "resisc45": 1.6251455180442373
+  },
+  "acc_merged_mean": 0.38486772486772486
+ },
+ "retention_p2": {
+  "retention_mean": 0.6459416162382712,
+  "retention_worst": 0.5903328230188313,
+  "per_task": {
+   "eurosat": 0.5903328230188313,
+   "resisc45": 0.7015504094577112
+  },
+  "acc_merged_mean": 0.08334656339138746
+ },
+ "feature_drift": {
+  "eurosat": 1.1013522148132324,
+  "resisc45": 0.6618724465370178
+ },
+ "cka": {
+  "eurosat": 0.7845800984676692,
+  "resisc45": 0.10106464474943082
+ },
+ "taskvec_geometry": {
+  "names": [
+   "eurosat",
+   "resisc45"
+  ],
+  "pairwise_cosine_mean": 0.17774571478366852,
+  "pairwise_cosine": [
+   [
+    1.0007984638214111,
+    0.17774571478366852
+   ],
+   [
+    0.17774571478366852,
+    1.00086510181427
+   ]
+  ],
+  "sign_conflict_rate": 0.4751926064491272,
+  "sign_conflict_per_layer": {
+   "net.blocks.0.attn.proj": 0.4730156660079956,
+   "net.blocks.0.attn.qkv": 0.39029043912887573,
+   "net.blocks.1.attn.proj": 0.4911431074142456,
+   "net.blocks.1.attn.qkv": 0.48852312564849854,
+   "net.blocks.10.attn.proj": 0.3967691957950592,
+   "net.blocks.10.attn.qkv": 0.5108077526092529,
+   "net.blocks.11.attn.proj": 0.3202379047870636,
+   "net.blocks.11.attn.qkv": 0.4503241777420044,
+   "net.blocks.2.attn.proj": 0.4974704384803772,
+   "net.blocks.2.attn.qkv": 0.4952867329120636,
+   "net.blocks.3.attn.proj": 0.5106472373008728,
+   "net.blocks.3.attn.qkv": 0.49902796745300293,
+   "net.blocks.4.attn.proj": 0.5035942792892456,
+   "net.blocks.4.attn.qkv": 0.48646828532218933,
+   "net.blocks.5.attn.proj": 0.5085585117340088,
+   "net.blocks.5.attn.qkv": 0.5009109973907471,
+   "net.blocks.6.attn.proj": 0.5184800624847412,
+   "net.blocks.6.attn.qkv": 0.49774622917175293,
+   "net.blocks.7.attn.proj": 0.5925225019454956,
+   "net.blocks.7.attn.qkv": 0.5009720325469971,
+   "net.blocks.8.attn.proj": 0.4618055522441864,
+   "net.blocks.8.attn.qkv": 0.45574724674224854,
+   "net.blocks.9.attn.proj": 0.3721517026424408,
+   "net.blocks.9.attn.qkv": 0.4448445737361908
+  },
+  "subspace_overlap_mean": 0.5480179364482561,
+  "stable_rank": {
+   "eurosat": 1.2049151663145636,
+   "resisc45": 1.0147737654418478
+  },
+  "participation_ratio": {
+   "eurosat": 1.3478375325600307,
+   "resisc45": 1.029782623052597
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.0,
+  0.0
+ ]
+}

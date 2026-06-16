@@ -1,0 +1,81 @@
+{
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "vjepa2_l": {
+  "load_s": 9.5,
+  "embed_dim": 1024,
+  "n_lora_targets": 96,
+  "forward_shape": [
+   32,
+   1024
+  ],
+  "embedding_isotropy": {
+   "effective_rank": 13.09716986034185,
+   "effective_rank_frac": 0.012790204941740088,
+   "eigenvalue_entropy": 0.7422366382832307,
+   "eigenvalue_ratio": 0.0,
+   "isoscore": 0.0,
+   "dim": 1024,
+   "top1_eig_frac": 0.27222040459689506
+  },
+  "step_s": 1.02,
+  "losses": [
+   3.8694,
+   3.6884,
+   3.4778
+  ],
+  "peak_vram_gb": 8.8,
+  "ok": true
+ },
+ "mae_l": {
+  "load_s": 4.9,
+  "embed_dim": 1024,
+  "n_lora_targets": 48,
+  "forward_shape": [
+   32,
+   1024
+  ],
+  "embedding_isotropy": {
+   "effective_rank": 2.4123764491480193,
+   "effective_rank_frac": 0.0023558363761211126,
+   "eigenvalue_entropy": 0.2540910112105811,
+   "eigenvalue_ratio": 2.916818259995604e-18,
+   "isoscore": 0.0,
+   "dim": 1024,
+   "top1_eig_frac": 0.7990351699844265
+  },
+  "step_s": 0.37,
+  "losses": [
+   2.2898,
+   2.2745,
+   2.2519
+  ],
+  "peak_vram_gb": 6.2,
+  "ok": true
+ },
+ "dinov2_l": {
+  "load_s": 4.8,
+  "embed_dim": 1024,
+  "n_lora_targets": 48,
+  "forward_shape": [
+   32,
+   1024
+  ],
+  "embedding_isotropy": {
+   "effective_rank": 14.223380223544753,
+   "effective_rank_frac": 0.013890019749555423,
+   "eigenvalue_entropy": 0.7660384921690373,
+   "eigenvalue_ratio": 0.0,
+   "isoscore": 0.0,
+   "dim": 1024,
+   "top1_eig_frac": 0.29587917647765727
+  },
+  "step_s": 0.53,
+  "losses": [
+   2.535,
+   2.4135,
+   2.2566
+  ],
+  "peak_vram_gb": 7.5,
+  "ok": true
+ }
+}

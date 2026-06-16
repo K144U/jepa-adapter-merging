@@ -1,0 +1,230 @@
+{
+ "encoder": "mae_l",
+ "data": "mnist",
+ "n_images": 6000,
+ "pooled": {
+  "effective_rank": 3.905266123769499,
+  "effective_rank_frac": 0.0038137364489936516,
+  "eigenvalue_entropy": 0.19654208639525583,
+  "eigenvalue_ratio": 1.840183585150825e-15,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.7285664430138699
+ },
+ "block0": {
+  "effective_rank": 1.9496515729693444,
+  "effective_rank_frac": 0.0019039566142278754,
+  "eigenvalue_entropy": 0.09632163194294437,
+  "eigenvalue_ratio": 4.343340665839513e-10,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.876265420084552
+ },
+ "block1": {
+  "effective_rank": 2.771548353968895,
+  "effective_rank_frac": 0.0027065901894227492,
+  "eigenvalue_entropy": 0.14706921779018467,
+  "eigenvalue_ratio": 8.260960854310053e-09,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.7681968142683975
+ },
+ "block2": {
+  "effective_rank": 5.851649396063528,
+  "effective_rank_frac": 0.005714501363343289,
+  "eigenvalue_entropy": 0.2548843332409892,
+  "eigenvalue_ratio": 6.495454513362722e-08,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.46003892867432994
+ },
+ "block3": {
+  "effective_rank": 5.838192784536669,
+  "effective_rank_frac": 0.005701360141149091,
+  "eigenvalue_entropy": 0.25455218512483463,
+  "eigenvalue_ratio": 1.3941431130206905e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.49903938426211825
+ },
+ "block4": {
+  "effective_rank": 6.417226417415003,
+  "effective_rank_frac": 0.006266822673256839,
+  "eigenvalue_entropy": 0.26819498863749863,
+  "eigenvalue_ratio": 2.5175455192619236e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.5170988874587745
+ },
+ "block5": {
+  "effective_rank": 7.908365898072409,
+  "effective_rank_frac": 0.007723013572336337,
+  "eigenvalue_entropy": 0.2983379622094257,
+  "eigenvalue_ratio": 4.1813900302145444e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.47967196299632636
+ },
+ "block6": {
+  "effective_rank": 7.65633645398463,
+  "effective_rank_frac": 0.007476891068344365,
+  "eigenvalue_entropy": 0.29366542297494364,
+  "eigenvalue_ratio": 2.913382134984624e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.5022618338378869
+ },
+ "block7": {
+  "effective_rank": 7.885533324219073,
+  "effective_rank_frac": 0.007700716136932688,
+  "eigenvalue_entropy": 0.2979208332464882,
+  "eigenvalue_ratio": 4.950605128719439e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.5041192434416004
+ },
+ "block8": {
+  "effective_rank": 8.636368603851906,
+  "effective_rank_frac": 0.008433953714699127,
+  "eigenvalue_entropy": 0.31104248195068607,
+  "eigenvalue_ratio": 6.450663619872645e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.49418766428557537
+ },
+ "block9": {
+  "effective_rank": 10.248634359596828,
+  "effective_rank_frac": 0.010008431991793777,
+  "eigenvalue_entropy": 0.33573597769207997,
+  "eigenvalue_ratio": 7.277270537520103e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4666347994675347
+ },
+ "block10": {
+  "effective_rank": 10.041663799696842,
+  "effective_rank_frac": 0.009806312304391447,
+  "eigenvalue_entropy": 0.3327926423608682,
+  "eigenvalue_ratio": 7.440652871641179e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4730804143460983
+ },
+ "block11": {
+  "effective_rank": 10.055834013927676,
+  "effective_rank_frac": 0.009820150404226246,
+  "eigenvalue_entropy": 0.33299608361884364,
+  "eigenvalue_ratio": 6.525995024954266e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.47691021936947914
+ },
+ "block12": {
+  "effective_rank": 10.373881879264035,
+  "effective_rank_frac": 0.010130744022718784,
+  "eigenvalue_entropy": 0.3374883942752229,
+  "eigenvalue_ratio": 7.202401188979257e-07,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.47192551451200665
+ },
+ "block13": {
+  "effective_rank": 11.555797089321203,
+  "effective_rank_frac": 0.011284958095040237,
+  "eigenvalue_entropy": 0.3530544871538375,
+  "eigenvalue_ratio": 1.0073635356920512e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.452663341049708
+ },
+ "block14": {
+  "effective_rank": 12.166399431148562,
+  "effective_rank_frac": 0.011881249444481018,
+  "eigenvalue_entropy": 0.3604830369644542,
+  "eigenvalue_ratio": 1.2013216787067557e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4454597407097298
+ },
+ "block15": {
+  "effective_rank": 12.586925386263722,
+  "effective_rank_frac": 0.012291919322523166,
+  "eigenvalue_entropy": 0.365385401323383,
+  "eigenvalue_ratio": 1.2815843347404756e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4436564643378314
+ },
+ "block16": {
+  "effective_rank": 13.466949270851083,
+  "effective_rank_frac": 0.013151317647315511,
+  "eigenvalue_entropy": 0.37513511624435814,
+  "eigenvalue_ratio": 1.3768073820315191e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.43655551331968573
+ },
+ "block17": {
+  "effective_rank": 14.803949126933237,
+  "effective_rank_frac": 0.014456981569270739,
+  "eigenvalue_entropy": 0.38879101778937913,
+  "eigenvalue_ratio": 1.4483367472285974e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.42016084600346537
+ },
+ "block18": {
+  "effective_rank": 15.639528419223579,
+  "effective_rank_frac": 0.015272976971898026,
+  "eigenvalue_entropy": 0.39671251064134,
+  "eigenvalue_ratio": 1.5295607966673218e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4157241795665073
+ },
+ "block19": {
+  "effective_rank": 16.128391079944,
+  "effective_rank_frac": 0.01575038191400781,
+  "eigenvalue_entropy": 0.4011530621616555,
+  "eigenvalue_ratio": 1.592043208328959e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4134998512975588
+ },
+ "block20": {
+  "effective_rank": 16.733739946278902,
+  "effective_rank_frac": 0.01634154291628799,
+  "eigenvalue_entropy": 0.40646880147976094,
+  "eigenvalue_ratio": 1.5869846635729913e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.41052459926713475
+ },
+ "block21": {
+  "effective_rank": 16.71364415954725,
+  "effective_rank_frac": 0.016321918124557862,
+  "eigenvalue_entropy": 0.4062954420609357,
+  "eigenvalue_ratio": 1.6655088597089336e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.4205039588390583
+ },
+ "block22": {
+  "effective_rank": 17.076437842350877,
+  "effective_rank_frac": 0.01667620883042078,
+  "eigenvalue_entropy": 0.40939351539705443,
+  "eigenvalue_ratio": 1.58894076622554e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.42813449724438984
+ },
+ "block23": {
+  "effective_rank": 12.843392797679392,
+  "effective_rank_frac": 0.012542375778983782,
+  "eigenvalue_entropy": 0.36829544597939756,
+  "eigenvalue_ratio": 1.1165078309118403e-06,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.5129725828828265
+ }
+}

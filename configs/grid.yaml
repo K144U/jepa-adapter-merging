@@ -1,0 +1,65 @@
+# Experimental grid (plan section 1). Merger hyperparameters are tuned once
+# on the held-out validation pair, then FROZEN here before the full sweep
+# (pre-registration rule; see PREREG.md). lambda_ft is fixed from the pilot.
+
+tasks: [cars, dtd, eurosat, gtsrb, mnist, resisc45, sun397, svhn]
+
+arm_a_backbones: [vjepa2_l, mae_l, dinov2_l]
+
+conditions:
+  c0: {lambda_ft: 0.0}
+  c1: {lambda_ft: 0.05}   # pilot sweeps {0.02, 0.05, 0.1}; winner frozen here
+
+seeds: [0, 1, 2]
+
+lora: {r: 16, alpha: 32, dropout: 0.1, epochs: 10, batch_size: 128, lr: 1.0e-4}
+
+arm_b:
+  dataset: imagenet100
+  epochs: 200
+  batch_size: 256
+  lambda_mults: [0.0, 0.1, 0.3, 1.0, 3.0]   # B0..B4, x repo default (0.05)
+  pilot_lambda_mults: [0.1, 1.0]
+  pilot_epochs: 30        # flag-plant pilot: enough to differentiate isotropy
+                          # for the dose-response; full study uses 200 (above)
+
+mergers:           # PROPOSED defaults; frozen after validation-pair tuning
+  uniform: {}
+  task_arithmetic: {coef: 0.3}
+  ties: {density: 0.2, coef: 1.0}
+  dare_ties: {drop_p: 0.9, density: 0.2, coef: 1.0}
+  rd_encoder: {ridge_lambda: 0.05, rank: 16}   # frozen from an independent ridge sweep (worst-excess 0.091)
+
+# k=2 pair list (PROPOSED -- frozen at PREREG, plan 1.1): 5 close, 5 far
+pairs_close:
+  - [eurosat, resisc45]   # both remote sensing
+  - [mnist, svhn]         # both digits
+  - [gtsrb, svhn]         # street imagery, sign/digit recognition
+  - [cars, sun397]        # natural photographic object/scene
+  - [dtd, sun397]         # textures vs scenes (texture-heavy scenes)
+pairs_far:
+  - [mnist, dtd]
+  - [eurosat, cars]
+  - [gtsrb, sun397]
+  - [svhn, resisc45]
+  - [mnist, cars]
+
+k4_subsets: 8      # seeded samples of size 4
+k4_seed: 7
+
+pilot:
+  backbone: vjepa2_l   # fallback order per plan 1.1 if Week 1 flags it
+  pairs: [[eurosat, resisc45], [mnist, dtd]]   # one close, one far
+  mergers: [task_arithmetic, ties]
+  seeds: [0]
+  lambda_ft_sweep: [0.02, 0.05, 0.1]
+
+# Flag-plant preprint scope (2026-06-13): minimum evidence for the priority
+# claim -- H1 on one backbone (C0 vs C1 sweep), H2 mini dose-response
+# (2 pilot pretrains), cross-family isotropy-vs-retention scatter (3 public
+# backbones, C0). Reduced epochs; stated explicitly in the preprint.
+preprint:
+  tasks: [dtd, eurosat, mnist, resisc45]    # union of the pilot pairs
+  pairs: [[eurosat, resisc45], [mnist, dtd]]
+  lora_epochs: 5
+  family_backbones: [mae_l, dinov2_l]       # C0-only, for the scatter

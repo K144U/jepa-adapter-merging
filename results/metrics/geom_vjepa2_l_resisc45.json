@@ -1,0 +1,14 @@
+{
+ "encoder": "vjepa2_l",
+ "data": "resisc45",
+ "n_images": 1890,
+ "pooled": {
+  "effective_rank": 52.101841988832625,
+  "effective_rank_frac": 0.05088070506721936,
+  "eigenvalue_entropy": 0.5703262472788052,
+  "eigenvalue_ratio": 3.0513319417799774e-17,
+  "isoscore": 0.002791676468379914,
+  "dim": 1024,
+  "top1_eig_frac": 0.13605431642672544
+ }
+}

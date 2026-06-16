@@ -1,0 +1,141 @@
+{
+ "encoder": "dinov2_l",
+ "merger": "uniform",
+ "merger_args": {},
+ "tasks": [
+  "mnist",
+  "dtd"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/dinov2_l/mnist_c0_s0.pt",
+  "results/adapters/dinov2_l/dtd_c0_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "mnist": 0.9837,
+  "dtd": 0.8207446808510638
+ },
+ "acc_p2_merged": {
+  "mnist": 0.9384999871253967,
+  "dtd": 0.42127659916877747
+ },
+ "solo_p1": {
+  "mnist": 0.9905,
+  "dtd": 0.8212765957446808
+ },
+ "solo_p2": {
+  "mnist": 0.9895,
+  "dtd": 0.5132978723404256
+ },
+ "retention_p1": {
+  "retention_mean": 0.996243556010075,
+  "retention_worst": 0.9931347804139323,
+  "per_task": {
+   "mnist": 0.9931347804139323,
+   "dtd": 0.9993523316062176
+  },
+  "acc_merged_mean": 0.9022223404255318
+ },
+ "retention_p2": {
+  "retention_mean": 0.8845920999226163,
+  "retention_worst": 0.8207253952718151,
+  "per_task": {
+   "mnist": 0.9484588045734176,
+   "dtd": 0.8207253952718151
+  },
+  "acc_merged_mean": 0.6798882931470871
+ },
+ "feature_drift": {
+  "mnist": 0.7335994243621826,
+  "dtd": 0.18334558606147766
+ },
+ "cka": {
+  "mnist": 0.8627640428459605,
+  "dtd": 0.9873815907996081
+ },
+ "taskvec_geometry": {
+  "names": [
+   "mnist",
+   "dtd"
+  ],
+  "pairwise_cosine_mean": 0.008228796534240246,
+  "pairwise_cosine": [
+   [
+    1.0150625705718994,
+    0.008228796534240246
+   ],
+   [
+    0.008228796534240246,
+    1.024090051651001
+   ]
+  ],
+  "sign_conflict_rate": 0.49903950095176697,
+  "sign_conflict_per_layer": {
+   "net.blocks.0.attn.proj": 0.5135040283203125,
+   "net.blocks.0.attn.qkv": 0.5119832158088684,
+   "net.blocks.1.attn.proj": 0.49911975860595703,
+   "net.blocks.1.attn.qkv": 0.48835721611976624,
+   "net.blocks.10.attn.proj": 0.5025501251220703,
+   "net.blocks.10.attn.qkv": 0.5019509196281433,
+   "net.blocks.11.attn.proj": 0.5035037994384766,
+   "net.blocks.11.attn.qkv": 0.49941667914390564,
+   "net.blocks.12.attn.proj": 0.5028171539306641,
+   "net.blocks.12.attn.qkv": 0.5001516342163086,
+   "net.blocks.13.attn.proj": 0.4969053268432617,
+   "net.blocks.13.attn.qkv": 0.4994138181209564,
+   "net.blocks.14.attn.proj": 0.49994850158691406,
+   "net.blocks.14.attn.qkv": 0.49448361992836,
+   "net.blocks.15.attn.proj": 0.49579620361328125,
+   "net.blocks.15.attn.qkv": 0.49850115180015564,
+   "net.blocks.16.attn.proj": 0.4967813491821289,
+   "net.blocks.16.attn.qkv": 0.4946524202823639,
+   "net.blocks.17.attn.proj": 0.4984903335571289,
+   "net.blocks.17.attn.qkv": 0.4885730743408203,
+   "net.blocks.18.attn.proj": 0.4921140670776367,
+   "net.blocks.18.attn.qkv": 0.5018587112426758,
+   "net.blocks.19.attn.proj": 0.4972076416015625,
+   "net.blocks.19.attn.qkv": 0.5000877380371094,
+   "net.blocks.2.attn.proj": 0.5015296936035156,
+   "net.blocks.2.attn.qkv": 0.5019760131835938,
+   "net.blocks.20.attn.proj": 0.4998445510864258,
+   "net.blocks.20.attn.qkv": 0.5007727742195129,
+   "net.blocks.21.attn.proj": 0.4908914566040039,
+   "net.blocks.21.attn.qkv": 0.49516645073890686,
+   "net.blocks.22.attn.proj": 0.491302490234375,
+   "net.blocks.22.attn.qkv": 0.502192497253418,
+   "net.blocks.23.attn.proj": 0.4921236038208008,
+   "net.blocks.23.attn.qkv": 0.49725279211997986,
+   "net.blocks.3.attn.proj": 0.48070526123046875,
+   "net.blocks.3.attn.qkv": 0.5009657740592957,
+   "net.blocks.4.attn.proj": 0.49164390563964844,
+   "net.blocks.4.attn.qkv": 0.502923309803009,
+   "net.blocks.5.attn.proj": 0.5008707046508789,
+   "net.blocks.5.attn.qkv": 0.497100830078125,
+   "net.blocks.6.attn.proj": 0.5038461685180664,
+   "net.blocks.6.attn.qkv": 0.5064697265625,
+   "net.blocks.7.attn.proj": 0.49767494201660156,
+   "net.blocks.7.attn.qkv": 0.5067456364631653,
+   "net.blocks.8.attn.proj": 0.5066013336181641,
+   "net.blocks.8.attn.qkv": 0.4951149523258209,
+   "net.blocks.9.attn.proj": 0.5079574584960938,
+   "net.blocks.9.attn.qkv": 0.49524179100990295
+  },
+  "subspace_overlap_mean": 0.5683977318306764,
+  "stable_rank": {
+   "mnist": 2.1319299204031728,
+   "dtd": 3.7796806160215404
+  },
+  "participation_ratio": {
+   "mnist": 3.470123569170634,
+   "dtd": 7.454603681961696
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.0,
+  0.0
+ ]
+}

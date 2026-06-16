@@ -1,0 +1,191 @@
+{
+ "encoder": "vjepa2_l",
+ "merger": "task_arithmetic",
+ "merger_args": {
+  "coef": 0.3
+ },
+ "tasks": [
+  "eurosat",
+  "resisc45"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/vjepa2_l/eurosat_c1lam0.05_s0.pt",
+  "results/adapters/vjepa2_l/resisc45_c1lam0.05_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "eurosat": 0.960925925925926,
+  "resisc45": 0.871904761904762
+ },
+ "acc_p2_merged": {
+  "eurosat": 0.692037045955658,
+  "resisc45": 0.4638095200061798
+ },
+ "solo_p1": {
+  "eurosat": 0.97,
+  "resisc45": 0.8957142857142857
+ },
+ "solo_p2": {
+  "eurosat": 0.9746296296296296,
+  "resisc45": 0.8742857142857143
+ },
+ "retention_p1": {
+  "retention_mean": 0.9820318394653719,
+  "retention_worst": 0.9734183944710262,
+  "per_task": {
+   "eurosat": 0.9906452844597176,
+   "resisc45": 0.9734183944710262
+  },
+  "acc_merged_mean": 0.916415343915344
+ },
+ "retention_p2": {
+  "retention_mean": 0.6202761978321072,
+  "retention_worst": 0.5305010849743886,
+  "per_task": {
+   "eurosat": 0.7100513106898257,
+   "resisc45": 0.5305010849743886
+  },
+  "acc_merged_mean": 0.5779232829809189
+ },
+ "feature_drift": {
+  "eurosat": 0.7708120942115784,
+  "resisc45": 0.8446009755134583
+ },
+ "cka": {
+  "eurosat": 0.6750934963568127,
+  "resisc45": 0.7162636080315735
+ },
+ "taskvec_geometry": {
+  "names": [
+   "eurosat",
+   "resisc45"
+  ],
+  "pairwise_cosine_mean": 0.05095848813652992,
+  "pairwise_cosine": [
+   [
+    1.0217500925064087,
+    0.05095848813652992
+   ],
+   [
+    0.05095848813652992,
+    1.014240026473999
+   ]
+  ],
+  "sign_conflict_rate": 0.4877657890319824,
+  "sign_conflict_per_layer": {
+   "net.encoder.layer.0.attention.key": 0.5020742416381836,
+   "net.encoder.layer.0.attention.proj": 0.47613525390625,
+   "net.encoder.layer.0.attention.query": 0.49507617950439453,
+   "net.encoder.layer.0.attention.value": 0.4432344436645508,
+   "net.encoder.layer.1.attention.key": 0.5056257247924805,
+   "net.encoder.layer.1.attention.proj": 0.4914703369140625,
+   "net.encoder.layer.1.attention.query": 0.4900522232055664,
+   "net.encoder.layer.1.attention.value": 0.4665651321411133,
+   "net.encoder.layer.10.attention.key": 0.4958629608154297,
+   "net.encoder.layer.10.attention.proj": 0.4901256561279297,
+   "net.encoder.layer.10.attention.query": 0.4979667663574219,
+   "net.encoder.layer.10.attention.value": 0.49637699127197266,
+   "net.encoder.layer.11.attention.key": 0.478546142578125,
+   "net.encoder.layer.11.attention.proj": 0.48931121826171875,
+   "net.encoder.layer.11.attention.query": 0.4809303283691406,
+   "net.encoder.layer.11.attention.value": 0.47734737396240234,
+   "net.encoder.layer.12.attention.key": 0.4705543518066406,
+   "net.encoder.layer.12.attention.proj": 0.4847993850708008,
+   "net.encoder.layer.12.attention.query": 0.4864692687988281,
+   "net.encoder.layer.12.attention.value": 0.4792051315307617,
+   "net.encoder.layer.13.attention.key": 0.4762897491455078,
+   "net.encoder.layer.13.attention.proj": 0.4792346954345703,
+   "net.encoder.layer.13.attention.query": 0.4912700653076172,
+   "net.encoder.layer.13.attention.value": 0.4903087615966797,
+   "net.encoder.layer.14.attention.key": 0.46576881408691406,
+   "net.encoder.layer.14.attention.proj": 0.4730091094970703,
+   "net.encoder.layer.14.attention.query": 0.4763154983520508,
+   "net.encoder.layer.14.attention.value": 0.4699087142944336,
+   "net.encoder.layer.15.attention.key": 0.48024559020996094,
+   "net.encoder.layer.15.attention.proj": 0.47858142852783203,
+   "net.encoder.layer.15.attention.query": 0.48011302947998047,
+   "net.encoder.layer.15.attention.value": 0.4825868606567383,
+   "net.encoder.layer.16.attention.key": 0.47308826446533203,
+   "net.encoder.layer.16.attention.proj": 0.4754343032836914,
+   "net.encoder.layer.16.attention.query": 0.47806644439697266,
+   "net.encoder.layer.16.attention.value": 0.48209095001220703,
+   "net.encoder.layer.17.attention.key": 0.4895467758178711,
+   "net.encoder.layer.17.attention.proj": 0.4850635528564453,
+   "net.encoder.layer.17.attention.query": 0.4907655715942383,
+   "net.encoder.layer.17.attention.value": 0.4733600616455078,
+   "net.encoder.layer.18.attention.key": 0.49598217010498047,
+   "net.encoder.layer.18.attention.proj": 0.4781312942504883,
+   "net.encoder.layer.18.attention.query": 0.4876823425292969,
+   "net.encoder.layer.18.attention.value": 0.4753284454345703,
+   "net.encoder.layer.19.attention.key": 0.48918914794921875,
+   "net.encoder.layer.19.attention.proj": 0.47646141052246094,
+   "net.encoder.layer.19.attention.query": 0.4889717102050781,
+   "net.encoder.layer.19.attention.value": 0.47601985931396484,
+   "net.encoder.layer.2.attention.key": 0.4853324890136719,
+   "net.encoder.layer.2.attention.proj": 0.4901885986328125,
+   "net.encoder.layer.2.attention.query": 0.5160760879516602,
+   "net.encoder.layer.2.attention.value": 0.4718017578125,
+   "net.encoder.layer.20.attention.key": 0.48708438873291016,
+   "net.encoder.layer.20.attention.proj": 0.498992919921875,
+   "net.encoder.layer.20.attention.query": 0.4863595962524414,
+   "net.encoder.layer.20.attention.value": 0.49978160858154297,
+   "net.encoder.layer.21.attention.key": 0.4940166473388672,
+   "net.encoder.layer.21.attention.proj": 0.4975900650024414,
+   "net.encoder.layer.21.attention.query": 0.49656009674072266,
+   "net.encoder.layer.21.attention.value": 0.49596118927001953,
+   "net.encoder.layer.22.attention.key": 0.49750709533691406,
+   "net.encoder.layer.22.attention.proj": 0.5061702728271484,
+   "net.encoder.layer.22.attention.query": 0.49385643005371094,
+   "net.encoder.layer.22.attention.value": 0.49458789825439453,
+   "net.encoder.layer.23.attention.key": 0.48859119415283203,
+   "net.encoder.layer.23.attention.proj": 0.5077323913574219,
+   "net.encoder.layer.23.attention.query": 0.4948854446411133,
+   "net.encoder.layer.23.attention.value": 0.506718635559082,
+   "net.encoder.layer.3.attention.key": 0.49981689453125,
+   "net.encoder.layer.3.attention.proj": 0.49181175231933594,
+   "net.encoder.layer.3.attention.query": 0.4986457824707031,
+   "net.encoder.layer.3.attention.value": 0.4872579574584961,
+   "net.encoder.layer.4.attention.key": 0.4861116409301758,
+   "net.encoder.layer.4.attention.proj": 0.490631103515625,
+   "net.encoder.layer.4.attention.query": 0.49727535247802734,
+   "net.encoder.layer.4.attention.value": 0.4819965362548828,
+   "net.encoder.layer.5.attention.key": 0.5005731582641602,
+   "net.encoder.layer.5.attention.proj": 0.5023021697998047,
+   "net.encoder.layer.5.attention.query": 0.4958066940307617,
+   "net.encoder.layer.5.attention.value": 0.4855680465698242,
+   "net.encoder.layer.6.attention.key": 0.5112733840942383,
+   "net.encoder.layer.6.attention.proj": 0.49068450927734375,
+   "net.encoder.layer.6.attention.query": 0.48539066314697266,
+   "net.encoder.layer.6.attention.value": 0.4752388000488281,
+   "net.encoder.layer.7.attention.key": 0.4967489242553711,
+   "net.encoder.layer.7.attention.proj": 0.4913816452026367,
+   "net.encoder.layer.7.attention.query": 0.4885692596435547,
+   "net.encoder.layer.7.attention.value": 0.4882497787475586,
+   "net.encoder.layer.8.attention.key": 0.4910707473754883,
+   "net.encoder.layer.8.attention.proj": 0.48460865020751953,
+   "net.encoder.layer.8.attention.query": 0.5121908187866211,
+   "net.encoder.layer.8.attention.value": 0.47690486907958984,
+   "net.encoder.layer.9.attention.key": 0.4861717224121094,
+   "net.encoder.layer.9.attention.proj": 0.4894571304321289,
+   "net.encoder.layer.9.attention.query": 0.4901895523071289,
+   "net.encoder.layer.9.attention.value": 0.48325157165527344
+  },
+  "subspace_overlap_mean": 0.5438951229055723,
+  "stable_rank": {
+   "eurosat": 1.4972355645041107,
+   "resisc45": 1.6942370007148424
+  },
+  "participation_ratio": {
+   "eurosat": 2.0210306867957115,
+   "resisc45": 2.612397642185291
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.05,
+  0.05
+ ]
+}

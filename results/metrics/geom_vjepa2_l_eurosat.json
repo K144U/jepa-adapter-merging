@@ -1,0 +1,14 @@
+{
+ "encoder": "vjepa2_l",
+ "data": "eurosat",
+ "n_images": 2160,
+ "pooled": {
+  "effective_rank": 20.917844689249993,
+  "effective_rank_frac": 0.020427582704345696,
+  "eigenvalue_entropy": 0.43866623032447055,
+  "eigenvalue_ratio": 9.79589094684454e-18,
+  "isoscore": 0.0,
+  "dim": 1024,
+  "top1_eig_frac": 0.3131821277338162
+ }
+}

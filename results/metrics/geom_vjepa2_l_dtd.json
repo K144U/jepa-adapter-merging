@@ -1,0 +1,14 @@
+{
+ "encoder": "vjepa2_l",
+ "data": "dtd",
+ "n_images": 1880,
+ "pooled": {
+  "effective_rank": 83.42264535178819,
+  "effective_rank_frac": 0.08146742710135566,
+  "eigenvalue_entropy": 0.6382367156040365,
+  "eigenvalue_ratio": 2.0046405214442615e-17,
+  "isoscore": 0.005442969907545661,
+  "dim": 1024,
+  "top1_eig_frac": 0.10936539349020921
+ }
+}

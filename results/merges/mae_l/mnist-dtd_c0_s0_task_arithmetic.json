@@ -1,0 +1,143 @@
+{
+ "encoder": "mae_l",
+ "merger": "task_arithmetic",
+ "merger_args": {
+  "coef": 0.3
+ },
+ "tasks": [
+  "mnist",
+  "dtd"
+ ],
+ "k": 2,
+ "adapters": [
+  "results/adapters/mae_l/mnist_c0_s0.pt",
+  "results/adapters/mae_l/dtd_c0_s0.pt"
+ ],
+ "acc_p1_merged": {
+  "mnist": 0.9878,
+  "dtd": 0.6867021276595745
+ },
+ "acc_p2_merged": {
+  "mnist": 0.3416000008583069,
+  "dtd": 0.10372340679168701
+ },
+ "solo_p1": {
+  "mnist": 0.9894,
+  "dtd": 0.6882978723404255
+ },
+ "solo_p2": {
+  "mnist": 0.9845,
+  "dtd": 0.1356382978723404
+ },
+ "retention_p1": {
+  "retention_mean": 0.9980322328584075,
+  "retention_worst": 0.9976816074188564,
+  "per_task": {
+   "mnist": 0.9983828582979585,
+   "dtd": 0.9976816074188564
+  },
+  "acc_merged_mean": 0.8372510638297872
+ },
+ "retention_p2": {
+  "retention_mean": 0.5558420317137794,
+  "retention_worst": 0.34697816237512125,
+  "per_task": {
+   "mnist": 0.34697816237512125,
+   "dtd": 0.7647059010524376
+  },
+  "acc_merged_mean": 0.22266170382499695
+ },
+ "feature_drift": {
+  "mnist": 0.810951828956604,
+  "dtd": 0.10002817958593369
+ },
+ "cka": {
+  "mnist": 0.6169979871817245,
+  "dtd": 0.9992472877826799
+ },
+ "taskvec_geometry": {
+  "names": [
+   "mnist",
+   "dtd"
+  ],
+  "pairwise_cosine_mean": 0.012703271582722664,
+  "pairwise_cosine": [
+   [
+    1.0150389671325684,
+    0.012703271582722664
+   ],
+   [
+    0.012703271582722664,
+    1.017886996269226
+   ]
+  ],
+  "sign_conflict_rate": 0.4961569011211395,
+  "sign_conflict_per_layer": {
+   "net.blocks.0.attn.proj": 0.501286506652832,
+   "net.blocks.0.attn.qkv": 0.48285770416259766,
+   "net.blocks.1.attn.proj": 0.49533557891845703,
+   "net.blocks.1.attn.qkv": 0.48835721611976624,
+   "net.blocks.10.attn.proj": 0.4948148727416992,
+   "net.blocks.10.attn.qkv": 0.4954153597354889,
+   "net.blocks.11.attn.proj": 0.4915485382080078,
+   "net.blocks.11.attn.qkv": 0.4968465268611908,
+   "net.blocks.12.attn.proj": 0.49216175079345703,
+   "net.blocks.12.attn.qkv": 0.49748674035072327,
+   "net.blocks.13.attn.proj": 0.5004806518554688,
+   "net.blocks.13.attn.qkv": 0.49261507391929626,
+   "net.blocks.14.attn.proj": 0.4943075180053711,
+   "net.blocks.14.attn.qkv": 0.4963134229183197,
+   "net.blocks.15.attn.proj": 0.49584197998046875,
+   "net.blocks.15.attn.qkv": 0.4920326769351959,
+   "net.blocks.16.attn.proj": 0.49898719787597656,
+   "net.blocks.16.attn.qkv": 0.49348321557044983,
+   "net.blocks.17.attn.proj": 0.5074214935302734,
+   "net.blocks.17.attn.qkv": 0.49831295013427734,
+   "net.blocks.18.attn.proj": 0.48920631408691406,
+   "net.blocks.18.attn.qkv": 0.5012200474739075,
+   "net.blocks.19.attn.proj": 0.5010786056518555,
+   "net.blocks.19.attn.qkv": 0.4969237744808197,
+   "net.blocks.2.attn.proj": 0.5048360824584961,
+   "net.blocks.2.attn.qkv": 0.5072854161262512,
+   "net.blocks.20.attn.proj": 0.4945716857910156,
+   "net.blocks.20.attn.qkv": 0.5011593699455261,
+   "net.blocks.21.attn.proj": 0.4998636245727539,
+   "net.blocks.21.attn.qkv": 0.49523067474365234,
+   "net.blocks.22.attn.proj": 0.4934730529785156,
+   "net.blocks.22.attn.qkv": 0.4925823211669922,
+   "net.blocks.23.attn.proj": 0.5066766738891602,
+   "net.blocks.23.attn.qkv": 0.49875926971435547,
+   "net.blocks.3.attn.proj": 0.4963359832763672,
+   "net.blocks.3.attn.qkv": 0.5031178593635559,
+   "net.blocks.4.attn.proj": 0.501988410949707,
+   "net.blocks.4.attn.qkv": 0.4984346926212311,
+   "net.blocks.5.attn.proj": 0.4962587356567383,
+   "net.blocks.5.attn.qkv": 0.49489626288414,
+   "net.blocks.6.attn.proj": 0.5009775161743164,
+   "net.blocks.6.attn.qkv": 0.4911003112792969,
+   "net.blocks.7.attn.proj": 0.4977884292602539,
+   "net.blocks.7.attn.qkv": 0.5003337860107422,
+   "net.blocks.8.attn.proj": 0.49050235748291016,
+   "net.blocks.8.attn.qkv": 0.4939117431640625,
+   "net.blocks.9.attn.proj": 0.49150848388671875,
+   "net.blocks.9.attn.qkv": 0.48926034569740295
+  },
+  "subspace_overlap_mean": 0.5096883717924356,
+  "stable_rank": {
+   "mnist": 1.5845676680425544,
+   "dtd": 2.1848979503590917
+  },
+  "participation_ratio": {
+   "mnist": 2.153029687702656,
+   "dtd": 3.66604616244634
+  }
+ },
+ "seeds": [
+  0,
+  0
+ ],
+ "lambda_ft": [
+  0.0,
+  0.0
+ ]
+}
